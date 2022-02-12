@@ -9,4 +9,14 @@ export default class TripController extends BaseController {
       console.log(err);
     }
   }
+
+  async create(req, res) {
+    try {
+      const { name } = req.body;
+      const trip = await this.model.create({ name });
+      res.json({ trip });
+    } catch (err) {
+      res.status(503).send({ err });
+    }
+  }
 }
