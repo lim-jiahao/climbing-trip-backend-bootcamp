@@ -1,8 +1,6 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-     await queryInterface.createTable('trips', {
+    await queryInterface.createTable('trips', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -21,7 +19,8 @@ module.exports = {
         type: Sequelize.DATE,
       },
     });
-    await queryInterface.createTable('routes', {
+
+    await queryInterface.createTable('climbs', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -53,7 +52,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable('climbs');
     await queryInterface.dropTable('trips');
-    await queryInterface.dropTable('routes');
-  }
+  },
 };

@@ -18,6 +18,7 @@ module.exports = {
     // when importing local modules without the .js extension.
     // https://github.com/airbnb/javascript/issues/2134
     'import/extensions': ['error', 'ignorePackages'],
+    'import/no-extraneous-dependencies': 'off',
     // Disable linebreak style to prevent ESLint errors on Windows line endings
     // https://eslint.org/docs/rules/linebreak-style
     'linebreak-style': 'off',

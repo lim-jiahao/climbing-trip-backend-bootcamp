@@ -1,6 +1,6 @@
-export default function initRouteModel(sequelize, DataTypes) {
+export default function initClimbModel(sequelize, DataTypes) {
   return sequelize.define(
-    'route',
+    'climb',
     {
       id: {
         allowNull: false,
@@ -34,6 +34,6 @@ export default function initRouteModel(sequelize, DataTypes) {
     {
       // The underscored option makes Sequelize reference snake_case names in the DB.
       underscored: true,
-    }
+    },
   );
-};
+}
