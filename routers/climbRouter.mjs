@@ -6,5 +6,6 @@ const router = express.Router();
 const controller = new ClimbController(db.Climb, db);
 
 router.get('/', controller.index.bind(controller));
+router.post('/', controller.create.bind(controller));
 
 export default router;

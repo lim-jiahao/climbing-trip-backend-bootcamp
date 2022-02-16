@@ -6,6 +6,7 @@ const router = express.Router();
 const controller = new TripController(db.Trip, db);
 
 router.get('/', controller.index.bind(controller));
+router.get('/:id', controller.get.bind(controller));
 router.post('/', controller.create.bind(controller));
 
 export default router;
